@@ -8,7 +8,7 @@ https://christinaqtruong.github.io/goGiphy/
 
 ## Contributor
 Christina Truong
-https://github.com/christinaqtruong
+https://github.com/christinaqtruong/goGiphy
 
 ## Requirements
 * GIPHY API
