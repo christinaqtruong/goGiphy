@@ -57,10 +57,11 @@ $(document).ready(function() {
     });
   });
 
-  $(".gif").on("click", function() {
+  $(document).on("click", ".gif-image", function() {
     var state = $(this).attr("data-state");
+
     if (state === "still") {
-      $(this.attr("src", $(this).attr("data-animate")));
+      $(this).attr("src", $(this).attr("data-animate"));
       $(this).attr("data-state", "animate");
     } else {
       $(this).attr("src", $(this).attr("data-still"));
