@@ -35,3 +35,14 @@ label{
 .search-btn{
     margin: 4px;
 }
+
+.gif-container{
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.gif-image{
+    margin: 4px;
+}
