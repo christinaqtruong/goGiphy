@@ -37,12 +37,28 @@ label{
 }
 
 .gif-container{
-    margin: 10px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
+.gif{
+    margin: 10px;
+    max-width: 25%;
+    max-height: 250px;
+}
+
 .gif-image{
-    margin: 4px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.card-body{
+    padding: 4px;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
 }

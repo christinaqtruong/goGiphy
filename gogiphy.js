@@ -14,7 +14,9 @@ $(document).ready(function() {
     event.preventDefault();
 
     var btnName = $("#form-input").val();
-    createBtn(btnName);
+    if(btnName.length > 2){
+        createBtn(btnName);
+    }
 
     $("#form-input").val("");
   });
@@ -35,22 +37,27 @@ $(document).ready(function() {
       method: "GET"
     }).then(function(response) {
       var results = response.data;
+      
       for (var i = 0; i < results.length; i++) {
-        var gifDiv = $("<div class='gif'>");
-        var rating = results[i].rating;
-        var p = $("<p>").text("Rating: " + rating);
+        var gifDiv = $("<div class='gif card'>");
         var animated = results[i].images.fixed_height.url;
         var still = results[i].images.fixed_height_still.url;
         var gifImage = $("<img>");
+        var title = results[i].title;
 
         gifImage.attr("src", still);
         gifImage.attr("data-still", still);
         gifImage.attr("data-animate", animated);
         gifImage.attr("data-state", "still");
-        gifImage.addClass("gif-image");
+        gifImage.addClass("gif-image card-img-top");
 
-        gifDiv.append(p);
         gifDiv.append(gifImage);
+
+        var cardBody = $("<div class='card-body'>");
+        gifDiv.append(cardBody);
+
+        var p = $("<p class='card-text'>").text(title);
+        cardBody.append(p);
 
         $(".gif-container").append(gifDiv);
       }
