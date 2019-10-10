@@ -19,6 +19,12 @@ $(document).ready(function() {
     }
 
     $("#form-input").val("");
+
+    var state = $(".button-container").attr("data-state");
+    if(state==="inactive"){
+        $(".button-container").attr("style", "border: solid 1px lightseagreen;");
+        $(".button-container").attr("data-state", "active");
+    }
   });
 
   $(document).on("click", ".search-btn", function() {

@@ -2,8 +2,12 @@
     margin: 10px;
 }
 
+.title{
+    font-size: 2em;
+}
+
 #create-btn{
-    margin: 0px 10px 10px 14px;
+    margin: 0px 14px 10px 14px;
     padding: 4px 9px;
     font-size: 14px !important;
 }
@@ -25,6 +29,8 @@ label{
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .btn{
@@ -34,6 +40,17 @@ label{
 
 .search-btn{
     margin: 4px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color:lightseagreen;
+    border-color:lightseagreen; 
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: lightskyblue;
+    border-color:lightskyblue; 
 }
 
 .gif-container{
